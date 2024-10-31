@@ -4,7 +4,7 @@
 }
 
 body{
-  background-image: url('/hg.jpeg');
+  background-image: url('./hg.jpeg');
   background-repeat: no-repeat;
   background-size:cover;
   height: 100vh;
