@@ -4,7 +4,7 @@
 }
 
 body{
-  background-image: url('/hg.jpeg');
+  background: linear-gradient(135deg, #a18cd1, #fbc2eb);
   background-repeat: no-repeat;
   background-size:cover;
   height: 100vh;
