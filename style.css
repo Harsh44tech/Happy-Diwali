@@ -1,0 +1,208 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-image: url('/hg.jpeg');
+  background-repeat: no-repeat;
+  background-size:cover;
+  height: 100vh;
+  margin: 0;
+}
+img{
+  height: 150px;
+  width: auto;
+  background: none;
+  position: absolute;
+  top: 350px;
+  left: 90px;
+}
+h1{
+  text-align: center;
+  position: absolute;
+  top: 190px;
+  left: 20px;
+  background: linear-gradient(to right, #f24d4d, #7df24d, #4df292,#4ae3bd);
+-webkit-background-clip: text;
+color: transparent;
+}h2 {
+  position: absolute;
+  top: 230px;
+  left: 10px;
+  z-index: 1;
+  font-weight: 500; /* or any desired weight (100, 400, etc.) */
+  animation: color 5s infinite linear;
+}
+
+.container {
+  display: flex;
+  gap: 10px;
+}/* Container for sparkles */
+.sparkle-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Each sparkle */
+.sparkle {
+  position: absolute;
+  top: -10px; /* Start above the screen */
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: fall linear infinite;
+  z-index: 1;
+  transform: rotate(45deg); /* Rotates square to make a diamond shape */
+  box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.5); /* Adds a glow */
+}
+
+/* Random positions for each sparkle */
+.sparkle:nth-child(1) { left: 20%; animation-duration: 2s; background-color:#f24d4d; }
+.sparkle:nth-child(2) { left: 40%; animation-duration: 3s; background-color:#7df24d;}
+.sparkle:nth-child(3) { left: 60%; animation-duration: 2.5s; background-color:#4df292;}
+.sparkle:nth-child(4) { left: 80%; animation-duration: 3.5s; background-color:#1508bf;}
+/* Add more nth-child selectors as needed */
+
+@keyframes fall {
+  0% {
+    transform: translateY(0);
+    opacity: 0.8;
+    rotate(45deg); /* Initial diamond shape */
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    rotate(45deg);
+    opacity: 0; /* Fade out at the bottom */
+  }
+}
+
+
+@keyframes color {
+  0% {
+    color: #4df2d5;
+  }
+  10% {
+    color: #09b5bd;
+  }
+  20% {
+    color: #4db9f2;
+  }
+  30% {
+    color: #4d9af2;
+  }
+  40% {
+    color: #4d7df2;
+  }
+  50% {
+    color: #1508bf;
+  }
+  60% {
+    color: #0887bf;
+  }
+  70% {
+    color: #47e4f9;
+  }
+  80%{
+    color: #47f9c8;
+  }
+  90%{
+    color: #47f9a6;
+  }
+  100%{
+    color:#4df2d5 ;
+  }
+}
+#flame2{
+  height: 60px;
+  width: 30px;
+  position: absolute;
+  left: 29.8%;
+  top: 52.2%;
+  z-index: 1;
+  background: radial-gradient(circle at 50% 20%, #FF4500, #FFA500, #FFD700);
+  border-radius: 10% 10% 70% 70% / 10% 10% 100% 100%;
+  transform: rotate(180deg);
+  animation: flicker 2s infinite alternate;
+  display: none;
+  box-shadow:0 25px 30px  rgb(0,0,000);
+  }
+  
+.match{
+  height: 10px;
+  width:100px;
+  background-color: #c19a6b;
+  position: absolute;
+}.flame {
+  height: 62px;
+  width: 45px;
+  position: absolute;
+  left: 0%;
+  top: -61%;
+  background: radial-gradient(circle at 50% 20%, #FF4500, #FFA500, #FFD700);
+  border-radius: 10% 10% 70% 70% / 10% 10% 100% 100%;
+  transform: rotate(180deg);
+  animation: flicker 2s infinite alternate;
+  z-index: 1;
+}
+
+@keyframes flicker {
+  0% {
+    transform: rotate(180deg) scale(1) translateY(0);
+    opacity: 0.9;
+    filter: brightness(1);
+  }
+  25% {
+    transform: rotate(180deg) scale(1.02) translateY(-2px);
+    opacity: 1;
+    filter: brightness(1.1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1) translateY(-4px);
+    opacity: 0.95;
+    filter: brightness(1);
+  }
+  75% {
+    transform: rotate(180deg) scale(0.98) translateY(-2px);
+    opacity: 0.85;
+    filter: brightness(0.9);
+  }
+  100% {
+    transform: rotate(180deg) scale(1) translateY(0);
+    opacity: 0.9;
+    filter: brightness(1);
+  }
+}
+.candle{
+  height: 100px;
+  width: 30px;
+  position: absolute;
+  top: 60%;
+  left: 30%;
+  background-color: #d17e7e;
+  border-radius: 5px;
+  transition: backgroundcolor 5s ease;
+}
+.bati{
+  height: 30px;
+  width: 5px;
+  background-color: #9b9b9b;
+  top: 57%;
+  left: 33%;
+  position: absolute;
+  transition: color 5s ease;
+}
+.box{
+  position: absolute;
+  top: 80%;
+  left:69.7% ;
+  height: 90px;
+  width: 100px;
+}
